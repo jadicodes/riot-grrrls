@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://yifn5poxq26p"]
+
+[ext_resource type="FontFile" uid="uid://ddq8u1sqotv72" path="res://menu/SedgwickAveDisplay-Regular.ttf" id="1_38wwq"]
+
+[resource]
+default_font = ExtResource("1_38wwq")
+default_font_size = 200

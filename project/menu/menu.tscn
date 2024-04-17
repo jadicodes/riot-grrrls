@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgjsprm5i0mla"]
+
+[ext_resource type="Theme" uid="uid://yifn5poxq26p" path="res://menu/title.tres" id="1_4t0jt"]
+[ext_resource type="Script" path="res://menu/menu.gd" id="1_qxkpw"]
+[ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="2_x34eq"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxkpw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 436.0
+offset_top = 272.0
+offset_right = 1480.0
+offset_bottom = 523.0
+theme = ExtResource("1_4t0jt")
+text = "RIOT GRRRLS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoomButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 521.0
+offset_right = 1415.0
+offset_bottom = 614.0
+theme = ExtResource("2_x34eq")
+text = "Let's go into a teenage girl's room"
+
+[connection signal="pressed" from="RoomButton" to="." method="_on_room_button_pressed"]
