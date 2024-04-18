@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dyho01sucgodm"]
+[gd_scene load_steps=2 format=3 uid="uid://dyho01sucgodm"]
+
+[ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="1_dlowr"]
 
 [node name="Bratmobile" type="Node2D"]
+
+[node name="ReturnToRoom" parent="." instance=ExtResource("1_dlowr")]
+offset_left = 752.0
+offset_top = 986.0
+offset_right = 1187.0
+offset_bottom = 1079.0

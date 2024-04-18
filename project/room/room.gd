@@ -11,3 +11,11 @@ func _on_cd_player_pressed():
 
 func _on_zine_pressed():
 	get_tree().change_scene_to_file("res://room/zines/zines.tscn")
+
+
+func _on_bratmobile_poster_pressed():
+	get_tree().change_scene_to_file("res://room/bratmobile/bratmobile.tscn")
+
+
+func _on_diary_pressed():
+	get_tree().change_scene_to_file("res://room/diary/diary.tscn")

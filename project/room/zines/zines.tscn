@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://y783tcasje2j"]
+[gd_scene load_steps=9 format=3 uid="uid://y783tcasje2j"]
 
 [ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="1_0ag0v"]
 [ext_resource type="Script" path="res://room/zines/zines.gd" id="1_ujt76"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b3swe1kybljel" path="res://room/zines/bikini_kill_zine_1.jpg" id="4_y6c0s"]
 [ext_resource type="Texture2D" uid="uid://chjk20b8ay62d" path="res://room/zines/bikini_kill_zine_2.jpg" id="6_hmiik"]
 [ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="7_17qnc"]
+[ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="8_cm3fo"]
 
 [node name="Zines" type="Node2D"]
 script = ExtResource("1_ujt76")
@@ -36,6 +37,7 @@ layout_mode = 3
 anchors_preset = 0
 
 [node name="TheIntroduction" type="TextureRect" parent="BikiniKillZine"]
+layout_mode = 0
 offset_left = 1123.0
 offset_top = -4.0
 offset_right = 1966.0
@@ -43,6 +45,7 @@ offset_bottom = 1082.0
 texture = ExtResource("3_1m0sr")
 
 [node name="TextureRect2" type="TextureRect" parent="BikiniKillZine"]
+layout_mode = 0
 offset_left = 263.0
 offset_top = 6.0
 offset_right = 1142.0
@@ -81,6 +84,12 @@ offset_bottom = 1157.0
 rotation = 4.71239
 theme = ExtResource("1_0ag0v")
 text = "Why are they doing this?"
+
+[node name="ReturnToRoom" parent="." instance=ExtResource("8_cm3fo")]
+offset_left = 764.0
+offset_top = 986.0
+offset_right = 1199.0
+offset_bottom = 1079.0
 
 [connection signal="pressed" from="BikiniKillButton" to="." method="_on_bikini_kill_button_pressed"]
 [connection signal="pressed" from="RevolutionButton" to="." method="_on_revolution_button_pressed"]

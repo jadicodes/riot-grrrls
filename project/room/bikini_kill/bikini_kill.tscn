@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://been2jks0lxs8"]
+[gd_scene load_steps=3 format=3 uid="uid://been2jks0lxs8"]
 
 [ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="1_5s7kl"]
+[ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="2_6wtf6"]
 
 [node name="BikiniKill" type="Control"]
 layout_mode = 3
@@ -26,3 +27,17 @@ text = "Bikini Kill
 
 Bikini Kill was a pioneer of the Riot 
 GRRRL movement."
+
+[node name="ReturnToRoom" parent="." instance=ExtResource("2_6wtf6")]
+layout_mode = 0
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 752.0
+offset_top = 987.0
+offset_right = 1187.0
+offset_bottom = 1080.0
+grow_horizontal = 1
+grow_vertical = 1

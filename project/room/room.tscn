@@ -78,4 +78,6 @@ color = Color(0.0470588, 0, 0.0666667, 1)
 
 [connection signal="pressed" from="BikiniGirlPoster" to="." method="_on_bikini_girl_poster_pressed"]
 [connection signal="pressed" from="CDPlayer" to="." method="_on_cd_player_pressed"]
+[connection signal="pressed" from="BratmobilePoster" to="." method="_on_bratmobile_poster_pressed"]
+[connection signal="pressed" from="Diary" to="." method="_on_diary_pressed"]
 [connection signal="pressed" from="Zine" to="." method="_on_zine_pressed"]
