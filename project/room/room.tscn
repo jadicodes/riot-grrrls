@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccndwdragyto2"]
+[gd_scene load_steps=13 format=3 uid="uid://ccndwdragyto2"]
 
 [ext_resource type="Script" path="res://room/room.gd" id="1_p5n4n"]
 [ext_resource type="Texture2D" uid="uid://b5c77fu51cmau" path="res://room/room.png" id="2_idsd3"]
@@ -6,6 +6,12 @@
 [ext_resource type="Texture2D" uid="uid://bm4uwfkd8amnv" path="res://room/bikini_kill_poster_hover.png" id="4_xiash"]
 [ext_resource type="Texture2D" uid="uid://dckhe8wu7kc6" path="res://room/boombox_normal.png" id="4_ykbi7"]
 [ext_resource type="Texture2D" uid="uid://ddxd6g6i4veqp" path="res://room/boombox_hover.png" id="5_4mmnf"]
+[ext_resource type="Texture2D" uid="uid://c62g3naxqafye" path="res://room/bratmobile_poster_normal.png" id="7_b1unu"]
+[ext_resource type="Texture2D" uid="uid://xfeiuonf1ghl" path="res://room/diary_normal.png" id="7_gnab1"]
+[ext_resource type="Texture2D" uid="uid://cevnfc1axjyi3" path="res://room/zines_normal.png" id="7_gxgde"]
+[ext_resource type="Texture2D" uid="uid://dd2kdlnagqj5p" path="res://room/diary_hover.png" id="8_lcw2i"]
+[ext_resource type="Texture2D" uid="uid://cq43gompdhghe" path="res://room/zines_hover.png" id="8_qag6t"]
+[ext_resource type="Texture2D" uid="uid://j1dqkvq3aqvs" path="res://room/bratmobile_poster_hover1.png" id="8_r4ve2"]
 
 [node name="Room" type="Node2D"]
 script = ExtResource("1_p5n4n")
@@ -16,10 +22,10 @@ offset_bottom = 40.0
 texture = ExtResource("2_idsd3")
 
 [node name="BikiniGirlPoster" type="TextureButton" parent="."]
-offset_left = 1166.0
-offset_top = 52.0
-offset_right = 1489.0
-offset_bottom = 538.0
+offset_left = 1238.0
+offset_top = 46.0
+offset_right = 1583.0
+offset_bottom = 551.0
 texture_normal = ExtResource("3_6px44")
 texture_hover = ExtResource("4_xiash")
 
@@ -31,28 +37,28 @@ offset_bottom = 610.0
 texture_normal = ExtResource("4_ykbi7")
 texture_hover = ExtResource("5_4mmnf")
 
-[node name="BratmobilePoster" type="Button" parent="."]
-offset_left = 863.0
-offset_top = 251.0
-offset_right = 1012.0
-offset_bottom = 282.0
-text = "Bratmobile Poster
-"
+[node name="BratmobilePoster" type="TextureButton" parent="."]
+offset_left = 921.0
+offset_top = 101.0
+offset_right = 1196.0
+offset_bottom = 468.0
+texture_normal = ExtResource("7_b1unu")
+texture_hover = ExtResource("8_r4ve2")
 
-[node name="Diary" type="Button" parent="."]
-offset_left = 1695.0
-offset_top = 787.0
-offset_right = 1744.0
-offset_bottom = 818.0
-text = "Diary
-"
+[node name="Diary" type="TextureButton" parent="."]
+offset_left = 1529.0
+offset_top = 663.0
+offset_right = 1749.0
+offset_bottom = 813.0
+texture_normal = ExtResource("7_gnab1")
+texture_hover = ExtResource("8_lcw2i")
 
-[node name="Zine" type="Button" parent="."]
-offset_left = 787.0
-offset_top = 992.0
-offset_right = 829.0
-offset_bottom = 1023.0
-text = "Zine
-"
+[node name="Zine" type="TextureButton" parent="."]
+offset_left = 484.0
+offset_top = 918.0
+offset_right = 874.0
+offset_bottom = 1065.0
+texture_normal = ExtResource("7_gxgde")
+texture_hover = ExtResource("8_qag6t")
 
 [connection signal="pressed" from="BikiniGirlPoster" to="." method="_on_bikini_girl_poster_pressed"]

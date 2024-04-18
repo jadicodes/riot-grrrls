@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lnryugdo18xi"
-path="res://.godot/imported/bikini_kill_poster.png-f0dc18f902e62a6870931d344677aa53.ctex"
+uid="uid://xfeiuonf1ghl"
+path="res://.godot/imported/diary_normal.png-5c87e9c575d7295edbc5f5734d7f534a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://room/bikini_kill_poster.png"
-dest_files=["res://.godot/imported/bikini_kill_poster.png-f0dc18f902e62a6870931d344677aa53.ctex"]
+source_file="res://room/diary_normal.png"
+dest_files=["res://.godot/imported/diary_normal.png-5c87e9c575d7295edbc5f5734d7f534a.ctex"]
 
 [params]
 
