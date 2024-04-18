@@ -7,3 +7,7 @@ func _on_bikini_girl_poster_pressed():
 
 func _on_cd_player_pressed():
 	get_tree().change_scene_to_file("res://room/cd_player/cd_player.tscn")
+
+
+func _on_zine_pressed():
+	get_tree().change_scene_to_file("res://room/zines/zines.tscn")

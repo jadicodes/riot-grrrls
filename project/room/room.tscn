@@ -63,3 +63,4 @@ texture_hover = ExtResource("8_qag6t")
 
 [connection signal="pressed" from="BikiniGirlPoster" to="." method="_on_bikini_girl_poster_pressed"]
 [connection signal="pressed" from="CDPlayer" to="." method="_on_cd_player_pressed"]
+[connection signal="pressed" from="Zine" to="." method="_on_zine_pressed"]

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://cc7n6536gudwm"]
+
+[ext_resource type="FontFile" uid="uid://cr3w0tktj4ong" path="res://common/CourierPrime-Regular.ttf" id="1_t2qlf"]
+
+[resource]
+default_font = ExtResource("1_t2qlf")
+default_font_size = 64

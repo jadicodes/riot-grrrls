@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://been2jks0lxs8"]
+[gd_scene load_steps=2 format=3 uid="uid://been2jks0lxs8"]
 
-[ext_resource type="Texture2D" uid="uid://lnryugdo18xi" path="res://room/bikini_kill_poster.png" id="1_tlgx3"]
-[ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="2_refkc"]
+[ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="1_5s7kl"]
 
 [node name="BikiniKill" type="Control"]
 layout_mode = 3
@@ -17,13 +16,12 @@ offset_left = 1177.0
 offset_top = 1.0
 offset_right = 1922.0
 offset_bottom = 1080.0
-texture = ExtResource("1_tlgx3")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_right = 1194.0
 offset_bottom = 261.0
-theme = ExtResource("2_refkc")
+theme = ExtResource("1_5s7kl")
 text = "Bikini Kill
 
 Bikini Kill was a pioneer of the Riot 

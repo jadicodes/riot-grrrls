@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://y783tcasje2j"]
+
+[ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="1_0ag0v"]
+
+[node name="Zines" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1915.0
+offset_bottom = 297.0
+theme = ExtResource("1_0ag0v")
+text = "The core of the movement was that women needed to
+carve out space for themselves. A place to vent and a place to explore issues like eating disorders, domestic abuse, homophobia, and racism. Being ten or so years before social media, this was a revolutionary vehicle of mass communication."
+autowrap_mode = 3
