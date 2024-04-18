@@ -6,17 +6,18 @@
 [ext_resource type="Texture2D" uid="uid://rq1025dmjv1v" path="res://room/zines/bikini_kill_zine.jpg" id="3_1m0sr"]
 [ext_resource type="Texture2D" uid="uid://b3swe1kybljel" path="res://room/zines/bikini_kill_zine_1.jpg" id="4_y6c0s"]
 [ext_resource type="Texture2D" uid="uid://chjk20b8ay62d" path="res://room/zines/bikini_kill_zine_2.jpg" id="6_hmiik"]
-[ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="7_17qnc"]
 [ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="8_cm3fo"]
+[ext_resource type="Texture2D" uid="uid://cbsnhihxlo1i7" path="res://room/zines/next.png" id="8_icp4d"]
 
 [node name="Zines" type="Node2D"]
 script = ExtResource("1_ujt76")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 434.0
-offset_top = 250.0
-offset_right = 1784.0
-offset_bottom = 1372.0
+visible = false
+offset_left = 320.0
+offset_top = 451.0
+offset_right = 1670.0
+offset_bottom = 1573.0
 theme = ExtResource("1_0ag0v")
 theme_override_font_sizes/font_size = 48
 text = "The core of the movement was that women needed to carve out space for themselves. A place to vent and a place to explore issues like eating disorders, domestic abuse, homophobia, and racism. Being ten or so years before social media, this was a revolutionary vehicle of mass communication."
@@ -24,66 +25,48 @@ horizontal_alignment = 1
 autowrap_mode = 3
 
 [node name="GirlPower" type="Label" parent="."]
-offset_left = 652.0
-offset_top = 16.0
-offset_right = 1579.0
-offset_bottom = 267.0
+visible = false
+offset_left = 516.0
+offset_top = 133.0
+offset_right = 1443.0
+offset_bottom = 384.0
 theme = ExtResource("2_3rrr1")
 text = "Girl Power!"
 
-[node name="BikiniKillZine" type="Control" parent="."]
-visible = false
+[node name="PageOne" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="TheIntroduction" type="TextureRect" parent="BikiniKillZine"]
+[node name="RiotGrrrl" type="TextureRect" parent="PageOne"]
 layout_mode = 0
-offset_left = 1123.0
-offset_top = -4.0
-offset_right = 1966.0
-offset_bottom = 1082.0
+offset_left = 986.0
+offset_top = 61.0
+offset_right = 1736.0
+offset_bottom = 953.0
 texture = ExtResource("3_1m0sr")
 
-[node name="TextureRect2" type="TextureRect" parent="BikiniKillZine"]
+[node name="TheIntroduction" type="TextureRect" parent="PageOne"]
 layout_mode = 0
-offset_left = 263.0
-offset_top = 6.0
-offset_right = 1142.0
-offset_bottom = 1081.0
+offset_left = 244.0
+offset_top = 61.0
+offset_right = 990.0
+offset_bottom = 952.0
 texture = ExtResource("4_y6c0s")
 
-[node name="BikiniKillButton" type="Button" parent="."]
-offset_left = 5.0
-offset_top = 1079.0
-offset_right = 1084.0
-offset_bottom = 1170.0
-rotation = 4.71239
-theme_override_font_sizes/font_size = 60
-text = "Bikini Kill"
-
-[node name="RevolutionButton" type="Button" parent="."]
-offset_left = 101.0
-offset_top = 1068.0
-offset_right = 1169.0
-offset_bottom = 1161.0
-rotation = 4.71239
-theme = ExtResource("7_17qnc")
-text = "The Revolution Starts Now"
-
-[node name="BikiniKillZine2" type="Sprite2D" parent="."]
+[node name="PageTwo" type="Control" parent="."]
 visible = false
-position = Vector2(1152, 541.5)
-scale = Vector2(1.51357, 1.61712)
-texture = ExtResource("6_hmiik")
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="WhyButton" type="Button" parent="."]
-offset_left = 198.0
-offset_top = 1077.0
-offset_right = 1273.0
-offset_bottom = 1157.0
-rotation = 4.71239
-theme = ExtResource("1_0ag0v")
-text = "Why are they doing this?"
+[node name="RevolutionStartsHere" type="TextureRect" parent="PageTwo"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 62.0
+offset_right = 1736.0
+offset_bottom = 950.0
+texture = ExtResource("6_hmiik")
 
 [node name="ReturnToRoom" parent="." instance=ExtResource("8_cm3fo")]
 offset_left = 764.0
@@ -91,6 +74,20 @@ offset_top = 986.0
 offset_right = 1199.0
 offset_bottom = 1079.0
 
-[connection signal="pressed" from="BikiniKillButton" to="." method="_on_bikini_kill_button_pressed"]
-[connection signal="pressed" from="RevolutionButton" to="." method="_on_revolution_button_pressed"]
-[connection signal="pressed" from="WhyButton" to="." method="_on_why_button_pressed"]
+[node name="NextButton" type="TextureButton" parent="."]
+offset_left = 1644.0
+offset_top = 456.0
+offset_right = 1844.0
+offset_bottom = 656.0
+texture_hover = ExtResource("8_icp4d")
+
+[node name="BackButton" type="TextureButton" parent="."]
+offset_left = 150.0
+offset_top = 432.0
+offset_right = 350.0
+offset_bottom = 632.0
+texture_hover = ExtResource("8_icp4d")
+flip_h = true
+
+[connection signal="pressed" from="NextButton" to="." method="_on_next_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

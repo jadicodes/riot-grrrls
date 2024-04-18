@@ -29,6 +29,12 @@ func _on_play_button_pressed():
 		_chosen_song.play()
 
 
+func _on_terrorist_button_pressed():
+	_pause()
+	_chosen_song = $Terrorist
+	$LyricsLabel.text = ("You follow me on the fucking street \nYou make me feel like a piece of meat \nYou think I don't know what war means? \nNow I'm the terrorist, see how it feels \nI'm going to kill you!")
+
+
 func _pause():
 	if _chosen_song == null:
 		pass

@@ -1,44 +1,90 @@
-[gd_scene load_steps=8 format=3 uid="uid://83v5862ba7dj"]
+[gd_scene load_steps=16 format=3 uid="uid://83v5862ba7dj"]
 
 [ext_resource type="Script" path="res://room/cd_player/cd_player.gd" id="1_o2k4n"]
 [ext_resource type="AudioStream" uid="uid://bo85uita7ij23" path="res://room/cd_player/rebel_girl.wav" id="1_ruw5e"]
 [ext_resource type="AudioStream" uid="uid://obtivaueow6k" path="res://room/cd_player/cool_schmool.wav" id="2_nc5hg"]
-[ext_resource type="Theme" uid="uid://yifn5poxq26p" path="res://menu/title.tres" id="3_d50j4"]
+[ext_resource type="Texture2D" uid="uid://b1hie2w0rsmwv" path="res://room/cd_player/rebel_girl_normal.png" id="4_k38o5"]
+[ext_resource type="Texture2D" uid="uid://ig4jkw3e8ddd" path="res://room/cd_player/rebel_girl_hover.png" id="5_4kd5f"]
 [ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="5_75u8o"]
 [ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="6_j1lxs"]
 [ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="7_elx5i"]
+[ext_resource type="Texture2D" uid="uid://dftqejxd3qj7u" path="res://room/cd_player/cool_schmool_normal.png" id="8_evfnw"]
+[ext_resource type="Texture2D" uid="uid://bq0jar2lthije" path="res://room/cd_player/cool_schmool_hover.png" id="9_tlwnq"]
+[ext_resource type="AudioStream" uid="uid://dnofnh4nppy7e" path="res://room/cd_player/terrorist.wav" id="12_xi13l"]
+[ext_resource type="Texture2D" uid="uid://3pqjg5juser4" path="res://room/cd_player/terrorist_normal.png" id="13_86s1x"]
+[ext_resource type="Texture2D" uid="uid://d03qvljomtn8p" path="res://room/cd_player/terrorist_hover.png" id="14_vvju3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uqmug"]
+bg_color = Color(0.0470588, 0, 0.0666667, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xitau"]
+bg_color = Color(0.635294, 0.294118, 0.556863, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 25
 
 [node name="CdPlayer" type="Node2D"]
 script = ExtResource("1_o2k4n")
 
+[node name="Panel" type="Panel" parent="."]
+offset_left = 107.0
+offset_top = 164.0
+offset_right = 1028.0
+offset_bottom = 902.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_uqmug")
+
+[node name="RebelGirlButton" type="TextureButton" parent="Panel"]
+offset_left = 11.0
+offset_top = 85.0
+offset_right = 887.0
+offset_bottom = 243.0
+theme = ExtResource("5_75u8o")
+texture_normal = ExtResource("4_k38o5")
+texture_hover = ExtResource("5_4kd5f")
+
+[node name="CoolSchmoolButton" type="TextureButton" parent="Panel"]
+offset_left = 16.0
+offset_top = 297.0
+offset_right = 974.0
+offset_bottom = 455.0
+theme = ExtResource("6_j1lxs")
+texture_normal = ExtResource("8_evfnw")
+texture_hover = ExtResource("9_tlwnq")
+
+[node name="TerroristButton" type="TextureButton" parent="Panel"]
+offset_left = 18.0
+offset_top = 507.0
+offset_right = 894.0
+offset_bottom = 665.0
+texture_normal = ExtResource("13_86s1x")
+texture_hover = ExtResource("14_vvju3")
+
 [node name="RebelGirl" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("1_ruw5e")
 
-[node name="RebelGirlButton" type="Button" parent="."]
-offset_left = 12.0
-offset_top = 17.0
-offset_right = 625.0
-offset_bottom = 110.0
-theme = ExtResource("5_75u8o")
-text = "Rebel Girl - Bikini Kill"
-
 [node name="CoolSchmool" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_nc5hg")
+volume_db = -5.621
 
-[node name="CoolSchmoolButton" type="Button" parent="."]
-offset_left = 10.0
-offset_top = 138.0
-offset_right = 968.0
-offset_bottom = 218.0
-theme = ExtResource("6_j1lxs")
-text = "Cool Schmool - Bratmobile"
+[node name="Terrorist" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_xi13l")
 
 [node name="PlayButton" type="Button" parent="."]
-offset_left = 1316.0
-offset_top = 55.0
-offset_right = 1715.0
-offset_bottom = 314.0
-theme = ExtResource("3_d50j4")
+offset_left = 1271.0
+offset_top = 63.0
+offset_right = 1670.0
+offset_bottom = 260.0
+theme = ExtResource("6_j1lxs")
+theme_override_font_sizes/font_size = 128
 text = "Play"
 
 [node name="ReturnToRoom" parent="." instance=ExtResource("7_elx5i")]
@@ -50,14 +96,18 @@ offset_right = 1158.0
 offset_bottom = 1082.0
 
 [node name="LyricsLabel" type="Label" parent="."]
-offset_left = 1188.0
-offset_top = 360.0
-offset_right = 1865.0
-offset_bottom = 995.0
+offset_left = 1114.0
+offset_top = 302.0
+offset_right = 1820.0
+offset_bottom = 944.0
 theme = ExtResource("6_j1lxs")
 theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_xitau")
+horizontal_alignment = 1
+vertical_alignment = 1
 autowrap_mode = 3
 
-[connection signal="pressed" from="RebelGirlButton" to="." method="_on_rebel_girl_button_pressed"]
-[connection signal="pressed" from="CoolSchmoolButton" to="." method="_on_cool_schmool_button_pressed"]
+[connection signal="pressed" from="Panel/RebelGirlButton" to="." method="_on_rebel_girl_button_pressed"]
+[connection signal="pressed" from="Panel/CoolSchmoolButton" to="." method="_on_cool_schmool_button_pressed"]
+[connection signal="pressed" from="Panel/TerroristButton" to="." method="_on_terrorist_button_pressed"]
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
