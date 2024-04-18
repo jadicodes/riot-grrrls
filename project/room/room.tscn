@@ -16,7 +16,7 @@
 [node name="Room" type="Node2D"]
 script = ExtResource("1_p5n4n")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_idsd3")
@@ -62,3 +62,4 @@ texture_normal = ExtResource("7_gxgde")
 texture_hover = ExtResource("8_qag6t")
 
 [connection signal="pressed" from="BikiniGirlPoster" to="." method="_on_bikini_girl_poster_pressed"]
+[connection signal="pressed" from="CDPlayer" to="." method="_on_cd_player_pressed"]

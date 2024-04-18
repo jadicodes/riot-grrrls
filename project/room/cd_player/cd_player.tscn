@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://83v5862ba7dj"]
+
+[ext_resource type="AudioStream" uid="uid://bo85uita7ij23" path="res://room/cd_player/rebel_girl.wav" id="1_ruw5e"]
+
+[node name="CdPlayer" type="Node2D"]
+
+[node name="RebelGirl" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_ruw5e")
+autoplay = true
