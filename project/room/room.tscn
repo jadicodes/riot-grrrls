@@ -61,6 +61,21 @@ offset_bottom = 1065.0
 texture_normal = ExtResource("7_gxgde")
 texture_hover = ExtResource("8_qag6t")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 961.0
+offset_top = 795.0
+offset_right = 973.0
+offset_bottom = 814.0
+color = Color(0.0470588, 0, 0.0666667, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 938.0
+offset_top = 797.0
+offset_right = 958.0
+offset_bottom = 826.0
+rotation = -0.675442
+color = Color(0.0470588, 0, 0.0666667, 1)
+
 [connection signal="pressed" from="BikiniGirlPoster" to="." method="_on_bikini_girl_poster_pressed"]
 [connection signal="pressed" from="CDPlayer" to="." method="_on_cd_player_pressed"]
 [connection signal="pressed" from="Zine" to="." method="_on_zine_pressed"]

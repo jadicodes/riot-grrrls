@@ -1,13 +1,87 @@
-[gd_scene load_steps=2 format=3 uid="uid://y783tcasje2j"]
+[gd_scene load_steps=8 format=3 uid="uid://y783tcasje2j"]
 
 [ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="1_0ag0v"]
+[ext_resource type="Script" path="res://room/zines/zines.gd" id="1_ujt76"]
+[ext_resource type="Theme" uid="uid://yifn5poxq26p" path="res://menu/title.tres" id="2_3rrr1"]
+[ext_resource type="Texture2D" uid="uid://rq1025dmjv1v" path="res://room/zines/bikini_kill_zine.jpg" id="3_1m0sr"]
+[ext_resource type="Texture2D" uid="uid://b3swe1kybljel" path="res://room/zines/bikini_kill_zine_1.jpg" id="4_y6c0s"]
+[ext_resource type="Texture2D" uid="uid://chjk20b8ay62d" path="res://room/zines/bikini_kill_zine_2.jpg" id="6_hmiik"]
+[ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="7_17qnc"]
 
 [node name="Zines" type="Node2D"]
+script = ExtResource("1_ujt76")
 
 [node name="Label" type="Label" parent="."]
-offset_right = 1915.0
-offset_bottom = 297.0
+offset_left = 434.0
+offset_top = 250.0
+offset_right = 1784.0
+offset_bottom = 1372.0
 theme = ExtResource("1_0ag0v")
-text = "The core of the movement was that women needed to
-carve out space for themselves. A place to vent and a place to explore issues like eating disorders, domestic abuse, homophobia, and racism. Being ten or so years before social media, this was a revolutionary vehicle of mass communication."
+theme_override_font_sizes/font_size = 48
+text = "The core of the movement was that women needed to carve out space for themselves. A place to vent and a place to explore issues like eating disorders, domestic abuse, homophobia, and racism. Being ten or so years before social media, this was a revolutionary vehicle of mass communication."
+horizontal_alignment = 1
 autowrap_mode = 3
+
+[node name="GirlPower" type="Label" parent="."]
+offset_left = 652.0
+offset_top = 16.0
+offset_right = 1579.0
+offset_bottom = 267.0
+theme = ExtResource("2_3rrr1")
+text = "Girl Power!"
+
+[node name="BikiniKillZine" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="TheIntroduction" type="TextureRect" parent="BikiniKillZine"]
+offset_left = 1123.0
+offset_top = -4.0
+offset_right = 1966.0
+offset_bottom = 1082.0
+texture = ExtResource("3_1m0sr")
+
+[node name="TextureRect2" type="TextureRect" parent="BikiniKillZine"]
+offset_left = 263.0
+offset_top = 6.0
+offset_right = 1142.0
+offset_bottom = 1081.0
+texture = ExtResource("4_y6c0s")
+
+[node name="BikiniKillButton" type="Button" parent="."]
+offset_left = 5.0
+offset_top = 1079.0
+offset_right = 1084.0
+offset_bottom = 1170.0
+rotation = 4.71239
+theme_override_font_sizes/font_size = 60
+text = "Bikini Kill"
+
+[node name="RevolutionButton" type="Button" parent="."]
+offset_left = 101.0
+offset_top = 1068.0
+offset_right = 1169.0
+offset_bottom = 1161.0
+rotation = 4.71239
+theme = ExtResource("7_17qnc")
+text = "The Revolution Starts Now"
+
+[node name="BikiniKillZine2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1152, 541.5)
+scale = Vector2(1.51357, 1.61712)
+texture = ExtResource("6_hmiik")
+
+[node name="WhyButton" type="Button" parent="."]
+offset_left = 198.0
+offset_top = 1077.0
+offset_right = 1273.0
+offset_bottom = 1157.0
+rotation = 4.71239
+theme = ExtResource("1_0ag0v")
+text = "Why are they doing this?"
+
+[connection signal="pressed" from="BikiniKillButton" to="." method="_on_bikini_kill_button_pressed"]
+[connection signal="pressed" from="RevolutionButton" to="." method="_on_revolution_button_pressed"]
+[connection signal="pressed" from="WhyButton" to="." method="_on_why_button_pressed"]
