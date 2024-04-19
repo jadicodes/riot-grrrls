@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://yifn5poxq26p" path="res://menu/title.tres" id="1_4t0jt"]
 [ext_resource type="Script" path="res://menu/menu.gd" id="1_qxkpw"]
 [ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="2_x34eq"]
-[ext_resource type="Texture2D" uid="uid://bm4uwfkd8amnv" path="res://room/bikini_kill_poster_hover.png" id="4_j4jqr"]
+[ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="4_v7j53"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -21,37 +21,39 @@ offset_top = 364.0
 offset_right = 1496.0
 offset_bottom = 615.0
 theme = ExtResource("1_4t0jt")
-text = "RIOT GRRRL"
+text = "riot grrrl"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="RoomButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 509.0
-offset_top = 638.0
-offset_right = 1419.0
-offset_bottom = 731.0
+offset_left = 511.0
+offset_top = 623.0
+offset_right = 1421.0
+offset_bottom = 716.0
 theme = ExtResource("2_x34eq")
 text = "Let's go into a teenage girl's room"
 
-[node name="BikiniKillPosterHover" type="Sprite2D" parent="."]
-position = Vector2(-450, 510)
-scale = Vector2(2.87029, 2.61535)
-texture = ExtResource("4_j4jqr")
+[node name="SourcesButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 877.0
+offset_top = 761.0
+offset_right = 1081.0
+offset_bottom = 854.0
+theme = ExtResource("2_x34eq")
+text = "Sources"
 
-[node name="BikiniKillPosterHover2" type="Sprite2D" parent="."]
-position = Vector2(2352, 465)
-scale = Vector2(2.87029, 2.61535)
-texture = ExtResource("4_j4jqr")
-
-[node name="BikiniKillPosterHover3" type="Sprite2D" parent="."]
-position = Vector2(951, -385)
-scale = Vector2(6.4058, 1.61262)
-texture = ExtResource("4_j4jqr")
-
-[node name="BikiniKillPosterHover4" type="Sprite2D" parent="."]
-position = Vector2(936, 1452)
-scale = Vector2(6.4058, 1.61262)
-texture = ExtResource("4_j4jqr")
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 21.0
+offset_right = 1538.0
+offset_bottom = 693.0
+theme = ExtResource("4_v7j53")
+theme_override_font_sizes/font_size = 32
+text = "https://www.washingtonpost.com/lifestyle/style/bikini-kill-was-a-girl-punk-group-ahead-of-its-time/2012/11/18/3fdc61bc-31d8-11e2-bfd5-e202b6d7b501_story.html
+https://daily.jstor.org/start-a-riot-and-a-zine-grrrl/
+https://www.youtube.com/watch?v=tAbhaguKARw"
+autowrap_mode = 3
 
 [connection signal="pressed" from="RoomButton" to="." method="_on_room_button_pressed"]

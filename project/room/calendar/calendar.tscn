@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://nvhiibvubgfb"]
+
+[ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="1_74u46"]
+[ext_resource type="Theme" uid="uid://yifn5poxq26p" path="res://menu/title.tres" id="2_g7r87"]
+[ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="3_1v75o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qs1mc"]
+bg_color = Color(0.6, 0.239216, 0.521569, 1)
+
+[node name="Calendar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1917.0
+offset_bottom = 204.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qs1mc")
+
+[node name="ReturnToRoom" parent="." instance=ExtResource("1_74u46")]
+layout_mode = 1
+offset_left = 718.0
+offset_top = 989.0
+offset_right = 1258.0
+offset_bottom = 1082.0
+
+[node name="DateTitle" type="Label" parent="."]
+layout_mode = 0
+offset_left = 862.0
+offset_top = 18.0
+offset_right = 1097.0
+offset_bottom = 206.0
+theme = ExtResource("2_g7r87")
+theme_override_font_sizes/font_size = 150
+text = "90s"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 388.0
+offset_right = 1840.0
+offset_bottom = 785.0
+theme = ExtResource("3_1v75o")
+theme_override_font_sizes/font_size = 48
+text = "“The more threats we got, the more I knew we were on the right trail,” Hanna says. “I just kept telling myself, ‘We’re on the right side of history.’ ”"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

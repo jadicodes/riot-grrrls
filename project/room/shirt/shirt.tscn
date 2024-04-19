@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmuhrle7kp8by"]
+
+[ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="1_80a2g"]
+[ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="2_ivdv8"]
+
+[node name="Shirt" type="Button"]
+
+[node name="ReturnToRoom" parent="." instance=ExtResource("1_80a2g")]
+layout_mode = 1
+offset_left = 719.0
+offset_top = 979.0
+offset_right = 1259.0
+offset_bottom = 1072.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 89.0
+offset_right = 1965.0
+offset_bottom = 686.0
+theme = ExtResource("2_ivdv8")
+text = "Did not conform to \"punk\" standards and was unabashedly female
+It was common to preform in makeup and dresses and other traditionally feminine fashion.
+
+It was by girls and for girls, they didn't care about maintaining a male audience... or a media presence at all."
+autowrap_mode = 3

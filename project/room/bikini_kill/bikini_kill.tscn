@@ -1,7 +1,42 @@
-[gd_scene load_steps=3 format=3 uid="uid://been2jks0lxs8"]
+[gd_scene load_steps=14 format=3 uid="uid://been2jks0lxs8"]
 
 [ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="1_5s7kl"]
+[ext_resource type="Texture2D" uid="uid://cmqkpve2yx17l" path="res://room/bikini_kill/bikini_pic2.jpg" id="2_1p37x"]
 [ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="2_6wtf6"]
+[ext_resource type="Texture2D" uid="uid://c7fga4tfkqswp" path="res://room/bikini_kill/bikini_kill.jpg" id="3_imxbe"]
+[ext_resource type="Texture2D" uid="uid://0s6je8t8gxuw" path="res://room/bikini_kill/hannah_slut.jpg" id="4_6ao1j"]
+[ext_resource type="Theme" uid="uid://yifn5poxq26p" path="res://menu/title.tres" id="5_1xm13"]
+[ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="6_1hhsu"]
+[ext_resource type="Texture2D" uid="uid://cntloa6c813fd" path="res://room/bikini_kill/olympia.png" id="8_w2f6n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5lir"]
+bg_color = Color(0.211765, 0.0666667, 0.2, 0.580392)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jmsp1"]
+bg_color = Color(0.45098, 0.184314, 0.380392, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_color = Color(0, 0, 0, 0.937255)
+shadow_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ca6ow"]
+bg_color = Color(0.847059, 0.427451, 0.717647, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72stx"]
+bg_color = Color(0, 0, 0, 0.337255)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u058u"]
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="BikiniKill" type="Control"]
 layout_mode = 3
@@ -11,22 +46,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 1177.0
-offset_top = 1.0
-offset_right = 1922.0
-offset_bottom = 1080.0
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_right = 1194.0
-offset_bottom = 261.0
-theme = ExtResource("1_5s7kl")
-text = "Bikini Kill
-
-Bikini Kill was a pioneer of the Riot 
-GRRRL movement."
+offset_left = 40.0
+offset_top = 34.0
+offset_right = 1878.0
+offset_bottom = 1046.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c5lir")
 
 [node name="ReturnToRoom" parent="." instance=ExtResource("2_6wtf6")]
 layout_mode = 0
@@ -37,7 +63,106 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 offset_left = 752.0
 offset_top = 987.0
-offset_right = 1187.0
+offset_right = 1292.0
 offset_bottom = 1080.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="BikiniPic2" type="Sprite2D" parent="."]
+position = Vector2(288, 156)
+scale = Vector2(0.299375, 0.303148)
+texture = ExtResource("2_1p37x")
+
+[node name="Pioneer" type="Label" parent="."]
+layout_mode = 0
+offset_left = 275.0
+offset_top = 193.0
+offset_right = 1039.0
+offset_bottom = 502.0
+theme = ExtResource("1_5s7kl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jmsp1")
+text = "Bikini Kill was a pioneer of the riot grrrl movement."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BikiniKill" type="Sprite2D" parent="."]
+position = Vector2(1458, 300)
+scale = Vector2(0.326416, 0.318548)
+texture = ExtResource("3_imxbe")
+
+[node name="HannahSlut" type="Sprite2D" parent="."]
+position = Vector2(343, 833)
+scale = Vector2(0.780775, 0.761628)
+texture = ExtResource("4_6ao1j")
+
+[node name="VehicleMusic" type="Label" parent="."]
+layout_mode = 0
+offset_left = 493.0
+offset_top = 474.0
+offset_right = 1402.0
+offset_bottom = 866.0
+theme = ExtResource("1_5s7kl")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxFlat_ca6ow")
+text = "After zines brought these women together, they decided that the best way to revolutionize the punk scene was to use its key vehicle: music."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GirlsToTheFront" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1160.0
+offset_top = 363.0
+offset_right = 1788.0
+offset_bottom = 469.0
+rotation = -0.404916
+theme = ExtResource("5_1xm13")
+text = "Girls to the front!"
+
+[node name="NamesLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1431.0
+offset_top = 713.0
+offset_right = 1803.0
+offset_bottom = 986.0
+theme = ExtResource("6_1hhsu")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_72stx")
+text = "Kathleen Hanna
+Billy Karren
+Kathi Wilcox
+Tobi Vail"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RebelGirlLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 436.0
+offset_right = 361.0
+offset_bottom = 682.0
+theme = ExtResource("5_1xm13")
+theme_override_colors/font_color = Color(0.686275, 0.686275, 0.686275, 1)
+theme_override_font_sizes/font_size = 64
+text = "REBEL GIRL
+REBEL GIRL
+REBEL GIRL"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1462.0
+offset_top = 620.0
+offset_right = 1755.0
+offset_bottom = 705.0
+theme = ExtResource("6_1hhsu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_u058u")
+text = "Members"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Olympia" type="Sprite2D" parent="."]
+position = Vector2(1710, 417)
+rotation = 0.47822
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("8_w2f6n")

@@ -19,3 +19,11 @@ func _on_bratmobile_poster_pressed():
 
 func _on_diary_pressed():
 	get_tree().change_scene_to_file("res://room/diary/diary.tscn")
+
+
+func _on_calendar_pressed():
+	get_tree().change_scene_to_file("res://room/calendar/calendar.tscn")
+
+
+func _on_shirt_pressed():
+	get_tree().change_scene_to_file("res://room/shirt/shirt.tscn")

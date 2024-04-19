@@ -13,7 +13,7 @@ func _process(_delta):
 func _on_rebel_girl_button_pressed():
 	_pause()
 	_chosen_song = $RebelGirl
-	$LyricsLabel.text = ("When she talks, I hear the revolution \nIn her hips, there's revolution \nWhen she walks, the revoltion's comin' \nIn her kiss, I taste the revolution \nRebel girl, rebel girl \nRebel girl you are the queen of my world")
+	$LyricsLabel.text = ("When she talks, I hear the revolution \nIn her hips, there's revolution \nWhen she walks, the revolution's comin' \nIn her kiss, I taste the revolution \nRebel girl, rebel girl \nRebel girl you are the queen of my world")
 
 
 func _on_cool_schmool_button_pressed():

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://7fj2qxdys1tw"]
 
-[ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="1_vnl4q"]
+[ext_resource type="Theme" uid="uid://cc7n6536gudwm" path="res://common/typewriter.tres" id="1_keuu4"]
 [ext_resource type="Script" path="res://common/return_to_room.gd" id="2_uj7su"]
 
 [node name="ReturnToRoom" type="Button"]
@@ -14,7 +14,7 @@ offset_top = -93.0
 offset_right = 217.5
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("1_vnl4q")
+theme = ExtResource("1_keuu4")
 text = "Return to Room"
 script = ExtResource("2_uj7su")
 

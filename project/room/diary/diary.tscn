@@ -1,8 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp1hwwl5o4kn2"]
+[gd_scene load_steps=5 format=3 uid="uid://cp1hwwl5o4kn2"]
 
 [ext_resource type="PackedScene" uid="uid://7fj2qxdys1tw" path="res://common/return_to_room.tscn" id="1_lwq4i"]
+[ext_resource type="Theme" uid="uid://buun4dw5wi0p5" path="res://menu/handwriting.tres" id="2_apuxn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3igw6"]
+bg_color = Color(0.690196, 0.490196, 0.709804, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mly6x"]
+bg_color = Color(0.898039, 0.890196, 0.835294, 1)
+corner_radius_top_left = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.32549)
+shadow_size = 40
 
 [node name="Diary" type="Button"]
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 42.0
+offset_right = 1795.0
+offset_bottom = 992.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3igw6")
 
 [node name="ReturnToRoom" parent="." instance=ExtResource("1_lwq4i")]
 layout_mode = 1
@@ -10,3 +33,87 @@ offset_left = 773.0
 offset_top = 974.0
 offset_right = 1208.0
 offset_bottom = 1067.0
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -7.0
+offset_top = 17.0
+offset_right = 33.0
+offset_bottom = 57.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 65.0
+offset_right = 976.0
+offset_bottom = 927.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mly6x")
+
+[node name="Panel2" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 1688.0
+offset_top = 928.0
+offset_right = 2390.0
+offset_bottom = 1790.0
+scale = Vector2(-1, -1)
+theme_override_styles/panel = SubResource("StyleBoxFlat_mly6x")
+
+[node name="2ndWaveTitle" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 345.0
+offset_top = 181.0
+offset_right = 914.0
+offset_bottom = 266.0
+theme = ExtResource("2_apuxn")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "2nd Wave Feminism"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2ndWaveTitle2" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1051.0
+offset_top = 182.0
+offset_right = 1620.0
+offset_bottom = 267.0
+theme = ExtResource("2_apuxn")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+text = "90s Punk Scene
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="List" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 295.0
+offset_top = 330.0
+offset_right = 962.0
+offset_bottom = 855.0
+theme = ExtResource("2_apuxn")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Sexuality
+Domestic violence
+Marital rape
+Workplace
+Critiquing the patriarchy"
+horizontal_alignment = 1
+
+[node name="List" type="Label" parent="Control/List"]
+layout_mode = 0
+offset_left = 709.0
+offset_top = 7.0
+offset_right = 1376.0
+offset_bottom = 532.0
+theme = ExtResource("2_apuxn")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Radical
+Social agendas
+Loud
+Fasion
+Toxic to women
+"
+horizontal_alignment = 1
